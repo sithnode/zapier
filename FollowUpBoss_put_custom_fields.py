@@ -29,6 +29,6 @@ payload = {
     'customCloseDate' : input.get('customCloseDate')
     }
 
-response = requests.request("PUT", people_url, headers=headers, data = payload)
+response = requests.request("PUT", people_url, headers=headers, json = payload)
 
 print(response.text.encode('utf8'))
