@@ -21,11 +21,11 @@ def get_fub(pid):
 	  'Content-Type': 'application/json'
 	}
 	results = r.request("GET", url, headers=headers)
-	data = results.json()	
-	return data['people'][0]
-	#return data['people'][0]['customPurchasePrice']
+	return results.json()	
 
-data = get_fub(pid)
+data = get_fub(input.get('fub_pid'))
+
+#Your custom fields may be different than each one listed below
 
 return {
 	'lastReceivedEmail': data['people'][0]['lastReceivedEmail'],
